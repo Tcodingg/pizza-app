@@ -1,23 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {Link} from 'react-scroll'
 import './style.scss'
 import {BiMenu} from 'react-icons/bi'
 
 export default function Main() {
+    const [showMenu, setShowMenu] = useState(false)
+    const [active, setActive] = useState(false);
     return (
         <header className='l-header' id='header'>
            <nav className='nav bd-container'>
             <a href="#" className='nav_logo'>Pizza</a>
-            <div className="nav_menu">
+            <div className={showMenu? 'nav_menu show-menu': 'nav_menu'}>
                 <ul className="nav_list">
-                    <li className="nav_items"><a href="#home" className='nav_link'>Home</a></li>
-                    <li className="nav_items"><a href="#about" className='nav_link'>About</a></li>
-                    <li className="nav_items"><a href="#services" className='nav_link'>Services</a></li>
-                    <li className="nav_items"><a href="#menu" className='nav_link'>Menu</a></li>
-                    <li className="nav_items"><a href="#contact" className='nav_link'>Contact Us</a></li>
+                    <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="home" spy={true} smooth={true} className='nav_link'>Home</Link></li>
+                    <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="about" spy={true} smooth={true} className='nav_link'>About</Link></li>
+                    <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="services" spy={true} smooth={true} className='nav_link'>Services</Link></li>
+                    <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="menu" spy={true} smooth={true} className='nav_link'>Menu</Link></li>
+                    <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="contact" spy={true} smooth={true} className='nav_link'>Contact Us</Link></li>
                     
                 </ul>
             </div>
-                <div className="nav_toggle" id="nav-toggle">
+                <div onClick={()=>setShowMenu(preVal=> !preVal)} className="nav_toggle" id="nav-toggle">
                 <BiMenu />
                 </div>
            </nav>

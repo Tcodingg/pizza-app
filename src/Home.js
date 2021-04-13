@@ -1,0 +1,21 @@
+import React from 'react'
+import './style.scss'
+import pizza from './images/pizza.png'
+
+export default function Home() {
+    return (
+        <main>
+            <section className='home' id='home' style={{height: '100vh'}}>
+                <div className='home_container bd-container bd-grid'>
+                    <div className="home_wrapper">
+                        <h1 className="home_title">Premium Pizza</h1>
+                        <h1 className="home_subtitle">Try Our Best Pizza of the Week.</h1>
+                        <a href="#" className='button'>View Menu</a>
+                    </div>
+                    <img src={pizza} alt="" className="home_img"/>
+                </div>
+               
+            </section>
+        </main>
+    )
+}
