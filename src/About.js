@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.scss'
+import about_us from './images/about_us.png'
 
 export default function About() {
     return (
@@ -13,6 +14,7 @@ export default function About() {
                         are always ready do assist you. Best Piazza for unbeated price, come visit us.
                     </p>
                     <a href="#" className='button'>Explore History</a>
+                    <img src={about_us} className='about_img' alt=""/>
                 </div>
             </div>
             

@@ -194,17 +194,29 @@ img{
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     transition: 0.3s; 
+    margin-bottom: $mb-3;
     :hover{
         background-color: $first-color-atl;
     }
 }
-
-.about-wrapper{
+//================about===================
+.about_wrapper{
     text-align: center;
-    p{
-        margin-bottom: $mb-3;
+} 
+  .about_description{
+       margin-bottom: $mb-3;
     }
-}  
+.about_img{
+     width: 280px;
+ justify-self: center;
+
+
+    }
+.sevices_container{
+    row-gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, min-max(220px, 1fr));
+}
+
 
   
   

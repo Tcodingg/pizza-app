@@ -3,6 +3,7 @@ import Main from './Main'
 import './index.scss'
 import Home from './Home'
 import About from './About'
+import Services from './Services'
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
             <Main />
             <Home />
             <About />
+            <Services />
         </div>
     )
 }
