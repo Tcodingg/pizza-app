@@ -4,6 +4,9 @@ import './index.scss'
 import Home from './Home'
 import About from './About'
 import Services from './Services'
+import Menu from './Menu'
+import Contact from './Contact'
+import Footer from './Footer'
 
 
 export default function App() {
@@ -13,6 +16,10 @@ export default function App() {
             <Home />
             <About />
             <Services />
+            <Menu />
+            <Contact />
+            <Footer /> 
+            
         </div>
     )
 }

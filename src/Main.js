@@ -12,7 +12,7 @@ export default function Main() {
             <a href="#" className='nav_logo'>Pizza</a>
             <div className={showMenu? 'nav_menu show-menu': 'nav_menu'}>
                 <ul className="nav_list">
-                    <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="home" spy={true} smooth={true} className='nav_link'>Home</Link></li>
+                    <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="home" offset={-50} spy={true} smooth={true} className='nav_link'>Home</Link></li>
                     <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="about" spy={true} smooth={true} className='nav_link'>About</Link></li>
                     <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="services" spy={true} smooth={true} className='nav_link'>Services</Link></li>
                     <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="menu" spy={true} smooth={true} className='nav_link'>Menu</Link></li>

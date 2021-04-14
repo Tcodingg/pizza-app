@@ -4,8 +4,8 @@ import pizza from './images/pizza.png'
 
 export default function Home() {
     return (
-        <main>
-            <section className='home' id='home' style={{height: '100vh'}}>
+        
+            <section className='home' id='home'>
                 <div className='home_container bd-container bd-grid'>
                     <div className="home_wrapper">
                         <h1 className="home_title">Premium Pizza</h1>
@@ -16,6 +16,6 @@ export default function Home() {
                 </div>
                
             </section>
-        </main>
+      
     )
 }
