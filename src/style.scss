@@ -12,6 +12,8 @@ $container-color: #ffffff;
 
 // ============font and typography ================
 
+
+
 $body-font: 'Poppins', sans-serif;
 $biggest-font-size: 2.25rem;
 $h1-font-size: 1.5rem;
@@ -58,6 +60,28 @@ $z-fixed: 100;
 html{
     scroll-behavior: smooth;
 }
+
+//=======================dark theme=================
+body.dark-theme{
+
+    $title-color: #f1f3f2;
+$text-color: #c7d1cc;
+
+$body-color:  #1d2521;
+$container-color: #27302c;
+
+}
+
+// ====================button dark/light=================
+
+.change-theme{
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+    color: $text-color;
+    font-size: 1rem;
+    cursor: pointer;
+}
 body{
     margin: $header-height 0 0 0;
     font-family: $body-font;
@@ -83,12 +107,12 @@ img{
 }
 
  // ============.section================
- .section{
-     padding: 4rem 0 2rem;
- }
- .section-title, .section-subtitle{
-     text-align: center;
- }
+.section{
+    padding: 4rem 0 2rem;
+}
+.section-title, .section-subtitle{
+    text-align: center;
+}
 .section-title{
     font-size: $h1-font-size;
     color: $title-color;
@@ -123,68 +147,79 @@ img{
  }
 
   // ============NAV================
-  .nav{
-      max-width: 1024px;
-      height: $header-height;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .nav_items{
-     
-      margin-bottom: $mb-2;
-    }
+.nav{
+    max-width: 1024px;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
    
-    .nav_link, .nav_logo, .nav_toggle{
-        color: $text-color;
-        font-weight: $font-meduim;
-        
+    align-items: center;
+
+}
+@media screen and (max-width: 768px){
+    .nav_menu{
+        position: fixed;
+        top: -1000px;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: $body-color;
+        transition: 0.4s;
+        box-shadow: 0 4px 4px rgba(0,0,0,.1);
+        border-radius: 0 0 1rem 1rem;
+        z-index: $z-fixed;
     }
-    .nav_logo:hover{
-        color:$first-color;
-    }
-    .nav_toggle{
-        font-size: 1.3rem;
-        cursor: pointer;
-    }
 
-    // =====================show menu=====================
+}
 
-    .show-menu{
-        top: $header-height;
 
-    }
-    //================scroll===================
-
-    
-
+.nav_items{
+    margin-bottom: $mb-2;
   }
+
+.nav_link, .nav_logo, .nav_toggle{
+    color: $text-color;
+    font-weight: $font-meduim;
+    
+}
+
+.nav_logo:hover{
+    color:$first-color;
+}
+
+.nav_toggle{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.nav .show-menu{
+    top: $header-height;
+
+}
 
    //================home===================
 
-   .home_container{
-       height: calc(100vh - $header-height);
-       align-content: center;
-   }
-   .home_title{
-       font-size: $biggest-font-size;
-       color: $first-color;
-       margin-bottom: $mb-1;
-   }
+.home_container{
+    height: calc(100vh - $header-height);
+    align-content: center;
+}
+.home_title{
+    font-size: $biggest-font-size;
+    color: $first-color;
+    margin-bottom: $mb-1;
+}
 
-   .home_subtitle{
-       font-size: $h1-font-size;
-       color: $title-color;
-       margin-bottom: $mb-4;
-       width: 270px;
-      
-   }
+.home_subtitle{
+    font-size: $h1-font-size;
+    color: $title-color;
+    margin-bottom: $mb-4;
+    width: 270px;
+}
    .home_img{
-    //    transform: scale(0.7);
-       width: 270px;
-       justify-self: center;
-
-       
-   }
+    width: 270px;
+    justify-self: center;
+}
 
       //================buttons===================
 .button{
@@ -195,9 +230,10 @@ img{
     border-radius: 0.5rem;
     transition: 0.3s; 
     margin-bottom: $mb-3;
-    :hover{
-        background-color: $first-color-atl;
-    }
+    
+}
+.button:hover{
+    background-color: $first-color-atl;
 }
 //================about===================
 .about_wrapper{
@@ -207,14 +243,17 @@ img{
        margin-bottom: $mb-3;
     }
 .about_img{
-     width: 280px;
- justify-self: center;
+    width: 280px;
+    justify-self: center;
+    border-radius: 0.5rem;
 
-
-    }
-.sevices_container{
+    //================services===================
+}
+.services_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     row-gap: 2.5rem;
-    grid-template-columns: repeat(auto-fit, min-max(220px, 1fr));
+
 }
 
 .services_content{
@@ -291,23 +330,147 @@ img{
 .contact_description{
     margin-bottom: $mb-3;
 }
-  @media screen and (max-width: 768px){
-      .nav_menu{
-          position: fixed;
-          top: -1000px;
-          left: 0;
-          width: 100%;
-          padding: 1.5rem 0 1rem;
-          text-align: center;
-          background-color: $body-color;
-          transition: 0.4s;
-          box-shadow: 0 4px 4px rgba(0,0,0,.1);
-          border-radius: 0 0 1rem 1rem;
-          z-index: -1;
-      }
-      
-  }
+//=================footer============
+.footer_container{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   row-gap: 2rem;
+}
 
+.footer_logo{
+    font-size: $h3-font-size;
+    color: $first-color;
+    font-weight: $smaller-font-size;
+}
+
+.footer_description{
+    display: block;
+    font-size: $small-font-size;
+    margin-bottom: 0.25rem 0 $mb-3;
+}
+
+.social{
+    font-size: 1.5rem;
+    color: $title-color;
+    margin-right: $mb-2;
+}
+
+.footer_title{
+    font-size: $h2-font-size;
+    color: $title-color;
+    margin-bottom: $mb-2;
+}
+
+.footer_link{
+    display: inline-block;
+    color: $text-color;
+    margin-bottom: $mb-1;
+}
+.footer_link:hover{
+    color: $first-color;
+}
+.footer_copy{
+    text-align: center;
+    font-size: $small-font-size;
+    color: $text-color-light;
+    margin-top: 3.5rem;
+}
+.contact_info{
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-right: $mb-2; 
+    
+}
+
+
+@media screen and (min-width: 576px){
+    .home_container, 
+    .about_container{
+        
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        
+    }
+    .about_wrapper, .about_initial, .contact_container, .contact_initial{
+        text-align: initial;
+    }
+    .about_img{
+        width: 380px;
+        order: -1;
+    }
+    .contact_container{
+        grid-template-columns: 1.75fr 1fr;
+        align-items: center;
+    }
+    .contact_button{
+        justify-self: center;
+    }
+}
+
+
+
+  @media screen and (min-width: 768px){
+ 
+      body{
+          margin: 0;
+        }
+      
+      .section{
+          padding-top: 8rem;
+      }
+      .nav{
+          height: calc($header-height + 1.5rem);
+      }
+      .nav_list{
+          display: flex;
+      }
+      .nav_items{
+          margin-left: $mb-5;
+          margin-bottom: 0em;
+      }
+      .nav_toggle{
+          display:none;
+      }
+      .home_container{
+          height: 100vh;
+          justify-items: center;
+      }
+      .home_wrapper{
+          padding: 0;
+          height: max-content;
+      }
+      .services_container, .menu_container{
+          margin-top: $mb-6;
+      }
+      .menu_container{
+          grid-template-columns: repeat(3, 210px);
+          column-gap: 4rem;
+      }
+      .menu_content{
+          padding: 1.5rem
+      }
+      .menu_img{
+          width: 130px;
+      }
+      .about_container{
+          column-gap: 7rem;
+      }
+      .change-theme{
+          position: initial;
+          margin-left: $mb-4;
+      }
+}
+@media screen and (min-width: 960px){
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home_img{
+        width: 500px;
+    }
+    .about_container{
+        column-gap: 7rem;
+    }
+}
 
 
 

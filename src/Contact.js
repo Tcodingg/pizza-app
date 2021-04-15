@@ -5,8 +5,8 @@ export default function Contact() {
       <section className="contact section bd-container">
           <div className="contact_container bd-grid">
               <div className="contact_wrapper">
-                  <span className="section-subtitle">Let's Talk</span>
-                  <h2 className="section-title"> Contanct Us</h2>
+                  <span className="section-subtitle contact_initial">Let's Talk</span>
+                  <h2 className="section-title contact_initial"> Contanct Us</h2>
                   <p className="contact_description">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nostrum?
                   </p>
