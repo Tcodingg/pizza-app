@@ -11,6 +11,7 @@ export default function Services() {
             <h2 className="section-title">Our Services</h2>
             <div className="services_container bd-grid">
                 <div className="services_content">
+                    
                     <GiCook className='services_img'/>
                     <h3 className="services_title">Presh Pizza</h3>
                     <p className="services_description">

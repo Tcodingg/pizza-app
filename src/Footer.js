@@ -19,31 +19,23 @@ export default function Footer() {
                         <a href="#" className='social'>< CgTwitter/></a>
                     </div>
                     </div>
-               
                     <div className="footer_content">
-
                             <h3 className="footer_title">Services</h3>
                             <ul>
                                 <li><a href="#" className='footer_link'>Delivery</a></li>
                                 <li><a href="#" className='footer_link'>Pricing</a></li>
                                 <li><a href="#" className='footer_link'>Customer Service</a></li>
                             </ul>
-
                     </div>
-
                     <div className="footer_content">
-
                             <h3 className="footer_title">Information</h3>
                             <ul>
                                 <li><a href="#" className='footer_link'>Event</a></li>
                                 <li><a href="#" className='footer_link'>Policy</a></li>
                                 <li><a href="#" className='footer_link'>Privacy</a></li>
                             </ul>
-
                     </div>
-
                     <div className="footer_content">
-
                             <h3 className="footer_title">Contact Us</h3>
                             <ul>
                                 <li><MdLocationOn className='contact_info' /> 123 Main st. Toront, ON</li>
