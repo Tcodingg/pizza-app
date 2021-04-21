@@ -1,5 +1,6 @@
 import React from 'react'
 import {menudata} from './menudata'
+import {AiFillHeart} from 'react-icons/ai'
 
 export default function Menu() {
     return (
@@ -11,11 +12,10 @@ export default function Menu() {
                     return(<div className="menu_content">
                         <img className='menu_img' src={menu.image} alt=""/>
                         <h1 className="menu_name">{menu.name}</h1>
-                <span className='menu_detail'>{menu.detail}</span>
-                <span className="menu_price">{menu.price}</span>
-                <a href="#" className="button menu_button">{menu.btn}</a>
-                     
-                    </div>)
+                        <span className='menu_detail'>{menu.detail}</span>
+                        <span className="menu_price">{menu.price}</span>
+                        <a href="#" className="button menu_button"><AiFillHeart /> </a>
+                </div>)
                 })}
             </div>
             

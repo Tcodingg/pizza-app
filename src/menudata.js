@@ -1,4 +1,4 @@
-import {CgShoppingCart} from 'react-icons/cg'
+
 import about_us from './images/about_us.png'
 
 export const menudata = [
@@ -7,7 +7,7 @@ export const menudata = [
         name: 'pepperoni',
         detail: 'Lorem ipsum dolor sit amet.',
         price: '$21.99',
-        btn: <CgShoppingCart />
+
 
     },
     {
@@ -15,7 +15,7 @@ export const menudata = [
         name: 'pepperoni',
         detail: 'Lorem ipsum dolor sit amet.',
         price: '$24.99',
-        btn: <CgShoppingCart />
+
 
     },
     {
@@ -23,7 +23,7 @@ export const menudata = [
         name: 'pepperoni',
         detail: 'Lorem ipsum dolor sit amet.',
         price: '$19.99',
-        btn: <CgShoppingCart />
+
 
     },
 
