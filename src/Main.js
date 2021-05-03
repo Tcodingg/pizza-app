@@ -22,8 +22,6 @@ export default function Main() {
                             <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="services" spy={true} smooth={true} className='nav_link'>Services</Link></li>
                             <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="menu" spy={true} smooth={true} className='nav_link'>Menu</Link></li>
                             <li className="nav_items"><Link onClick={()=>setShowMenu(false)}  to="contact" spy={true} smooth={true} className='nav_link'>Contact Us</Link></li>
-
-                            
                         </ul>
                     </div>
                        <div onClick={()=>setShowMenu(preVal=> !preVal)} className="nav_toggle" id="nav-toggle"> 
