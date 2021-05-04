@@ -1,6 +1,6 @@
 import React from "react";
 import Main from "./Main";
-import "./index.scss";
+import "./index.css";
 import Home from "./Home";
 import About from "./About";
 import Services from "./Services";

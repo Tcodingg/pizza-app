@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import "./style.css";
 import { FaPizzaSlice } from "react-icons/fa";
 import { GiCook } from "react-icons/gi";
 import { GiFoodTruck } from "react-icons/gi";

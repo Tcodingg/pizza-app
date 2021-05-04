@@ -1,55 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+:root {
+  --header-height: 3rem;
+  /* ============colors======= */
+  --first-color: #069c54;
+  --first-color-atl: #048654;
+  --title-color: #393939;
+  --text-color: #707070;
+  --text-color-light: #a6a6a6;
+  --body-color: #fbfefd;
+  --container-color: #ffffff;
 
-$header-height: 3rem;
-// ============colors=======
-$first-color: #069c54;
-$first-color-atl: #048654;
-$title-color: #393939;
-$text-color: #707070;
-$text-color-light: #a6a6a6;
-$body-color: #fbfefd;
-$container-color: #ffffff;
+  /* ============font and typography ================ */
 
-// ============font and typography ================
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  /* ============Font weight ================ */
 
-$body-font: "Poppins", sans-serif;
-$biggest-font-size: 2.25rem;
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1rem;
-$normal-font-size: 0.938rem;
-$small-font-size: 0.813rem;
-$smaller-font-size: 0.75rem;
+  --font-meduim: 500;
+  --font-semi-bold: 600;
 
-// ============Font weight ================
+  /* ============ Margines ================ */
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
 
-$font-meduim: 500;
-$font-semi-bold: 600;
-
-// ============ Margines ================
-$mb-1: 0.5rem;
-$mb-2: 1rem;
-$mb-3: 1.5rem;
-$mb-4: 2rem;
-$mb-5: 2.5rem;
-$mb-6: 3rem;
-
-// ============ z index ================
-$z-tooltip: 10;
-$z-fixed: 100;
-
-@media screen and (min-width: 768px) {
-  // ============font and typography ================
-  $biggest-font-size: 4rem;
-  $h1-font-size: 2.25rem;
-  $h2-font-size: 1.5rem;
-  $h3-font-size: 1.25rem;
-  $normal-font-size: 1rem;
-  $small-font-size: 0.875rem;
-  $smaller-font-size: 0.813rem;
+  /* ============ z index ================ */
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-// ============base================
+@media screen and (min-width: 768px) {
+  :root {
+    /*  ============font and typography ================ */
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* ============base================ */
 
 *,
 ::before,
@@ -61,11 +63,11 @@ html {
 }
 
 body {
-  margin: $header-height 0 0 0;
-  font-family: $body-font;
-  font-size: $normal-font-size;
-  background-color: $body-color;
-  color: $text-color;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
@@ -88,7 +90,7 @@ img {
   height: auto;
 }
 
-// ============.section================
+/* ============.section================ */
 .section {
   padding: 4rem 0 2rem;
 }
@@ -97,24 +99,24 @@ img {
   text-align: center;
 }
 .section-title {
-  font-size: $h1-font-size;
-  color: $title-color;
-  margin-bottom: $mb-3;
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-3);
 }
 
 .section-subtitle {
   display: block;
-  color: $first-color;
-  font-weight: $font-meduim;
-  margin-bottom: $mb-1;
+  color: var(--first-color);
+  font-weight: var(--font-meduim);
+  margin-bottom: var(--mb-1);
 }
 
-// ============layout================
+/* ============layout ================ */
 .bd-container {
   max-width: 960px;
   width: calc(100%-2rem);
-  margin-left: $mb-2;
-  margin-right: $mb-2;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
 }
 .bd-grid {
   display: grid;
@@ -124,14 +126,14 @@ img {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: $z-fixed;
-  background-color: $body-color;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
 }
 
-// ============NAV================
+/* ============ Nav================ */
 .nav {
   max-width: 1024px;
-  height: $header-height;
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
 
@@ -145,31 +147,28 @@ img {
     width: 100%;
     padding: 1.5rem 0 1rem;
     text-align: center;
-    background-color: $body-color;
+    background-color: var(--body-color);
     transition: 0.4s;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 1rem 1rem;
-    z-index: $z-fixed;
+    z-index: var(--z-fixed);
   }
 }
 
 .nav_items {
-  margin-bottom: $mb-2;
+  margin-bottom: var(--mb-2);
   cursor: pointer;
 }
 
 .nav_link,
 .nav_logo,
 .nav_toggle {
-  color: $text-color;
-  font-weight: $font-meduim;
+  color: var(--text-color);
+  font-weight: var(--font-meduim);
 }
-// .nav_list li:hover {
-//   cursor: pointer;
-// }
 
 .nav_logo:hover {
-  color: $first-color;
+  color: var(--first-color);
 }
 
 .nav_toggle {
@@ -178,25 +177,25 @@ img {
 }
 
 .nav .show-menu {
-  top: $header-height;
+  top: var(--header-height);
 }
 
-//================home===================
+/* ============ home ================ */
 
 .home_container {
-  height: calc(100vh - $header-height);
+  height: calc(100vh - 3rem);
   align-content: center;
 }
 .home_title {
-  font-size: $biggest-font-size;
-  color: $first-color;
-  margin-bottom: $mb-1;
+  font-size: var(--biggest-font-size);
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
 }
 
 .home_subtitle {
-  font-size: $h1-font-size;
-  color: $title-color;
-  margin-bottom: $mb-4;
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-4);
   width: 270px;
 }
 .home_img {
@@ -204,32 +203,32 @@ img {
   justify-self: center;
 }
 
-//================buttons===================
+/* ============buttons================ */
 .button {
   display: inline-block;
-  background-color: $first-color;
+  background-color: var(--first-color);
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   transition: 0.3s;
-  margin-bottom: $mb-3;
+  margin-bottom: var(--mb-3);
 }
 .button:hover {
-  background-color: $first-color-atl;
+  background-color: var(--first-color-atl);
 }
-//================about===================
+/* ============.about================ */
 .about_wrapper {
   text-align: center;
 }
 .about_description {
-  margin-bottom: $mb-3;
+  margin-bottom: var(--mb-3);
 }
 .about_img {
   width: 280px;
   justify-self: center;
   border-radius: 0.5rem;
 
-  //================services===================
+  /* ============ services ================ */
 }
 .services_container {
   display: grid;
@@ -244,13 +243,13 @@ img {
   width: 64px;
   height: 64px;
   color: #555;
-  margin-bottom: $mb-2;
+  margin-bottom: var(--mb-2);
 }
 
 .services_title {
-  font-size: $h3-font-size;
-  color: $title-color;
-  margin-bottom: $mb-1;
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1);
 }
 .services_description {
   padding: 0 1.5rem;
@@ -264,9 +263,9 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $container-color;
+  background-color: var(--container-color);
   border-radius: 0.5rem;
-  // box-shadow: 0 2px 4px rgba(0,0,.1);
+
   box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
   padding: 0.75rem;
 }
@@ -276,24 +275,24 @@ img {
 
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: $mb-2;
+  margin-bottom: var(--mb-2);
 }
 
 .menu_name,
 .menu_price {
-  font-weight: $font-semi-bold;
-  color: $title-color;
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
 }
 
 .menu_name {
-  font-size: $normal-font-size;
+  font-size: var(--normal-font-size);
 }
 .menu_detail,
 .menu_price {
-  font-size: $small-font-size;
+  font-size: var(--small-font-size);
 }
 .menu_detail {
-  margin-bottom: $mb-1;
+  margin-bottom: var(--mb-1);
 }
 
 .menu_button {
@@ -305,61 +304,61 @@ img {
   border-radius: 0.5rem 0 0.5rem 0;
 }
 
-//=================contact============
+/* ============ contact ================ */
 .contact_container {
   text-align: center;
 }
 .contact_description {
-  margin-bottom: $mb-3;
+  margin-bottom: var(--mb-3);
 }
-//=================footer============
+/* ============ footer ================ */
 .footer_container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   row-gap: 2rem;
 }
 
 .footer_logo {
-  font-size: $h3-font-size;
-  color: $first-color;
-  font-weight: $smaller-font-size;
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+  font-weight: var(--smaller-font-size);
 }
 
 .footer_description {
   display: block;
-  font-size: $small-font-size;
-  margin-bottom: 0.25rem 0 $mb-3;
+  font-size: var(--small-font-size);
+  margin-bottom: 0.25rem 0 var(--mb-3);
 }
 
 .social {
   font-size: 1.5rem;
-  color: $title-color;
-  margin-right: $mb-2;
+  color: var(--title-color);
+  margin-right: var(--mb-2);
 }
 
 .footer_title {
-  font-size: $h2-font-size;
-  color: $title-color;
-  margin-bottom: $mb-2;
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-2);
 }
 
 .footer_link {
   display: inline-block;
-  color: $text-color;
-  margin-bottom: $mb-1;
+  color: var(--text-color);
+  margin-bottom: var(--mb-1);
 }
 .footer_link:hover {
-  color: $first-color;
+  color: var(--first-color);
 }
 .footer_copy {
   text-align: center;
-  font-size: $small-font-size;
-  color: $text-color-light;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
   margin-top: 3.5rem;
 }
 .contact_info {
   font-size: 1.2rem;
-  color: $text-color;
-  margin-right: $mb-2;
+  color: var(--text-color);
+  margin-right: var(--mb-2);
 }
 
 @media screen and (min-width: 576px) {
@@ -396,13 +395,13 @@ img {
     padding-top: 8rem;
   }
   .nav {
-    height: calc($header-height + 1.5rem);
+    height: calc(var(--header-height) + 1.5rem);
   }
   .nav_list {
     display: flex;
   }
   .nav_items {
-    margin-left: $mb-5;
+    margin-left: var(--mb-5);
     margin-bottom: 0em;
   }
   .nav_toggle {
@@ -418,7 +417,7 @@ img {
   }
   .services_container,
   .menu_container {
-    margin-top: $mb-6;
+    margin-top: var(--mb-5);
   }
   .menu_container {
     grid-template-columns: repeat(3, 210px);
@@ -435,7 +434,7 @@ img {
   }
   .change-theme {
     position: initial;
-    margin-left: $mb-4;
+    margin-left: var(--mb-4);
   }
 }
 @media screen and (min-width: 960px) {
