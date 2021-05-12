@@ -1,13 +1,13 @@
 import React from "react";
-import Main from "./Main";
-import "./index.css";
-import Home from "./Home";
-import About from "./About";
-import Services from "./Services";
-import Menu from "./Menu";
-import Contact from "./Contact";
+import Main from "./components/Main";
+import "./styles/index.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Services from "./components/Services";
+import Menu from "./components/Menu";
+import Contact from "./components/Contact";
 
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (

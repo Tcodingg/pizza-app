@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 import { Link } from "react-scroll";
-import "./style.css";
+import "../styles/style.css";
 import { BiMenu } from "react-icons/bi";
 
 export const darkLightContext = createContext();

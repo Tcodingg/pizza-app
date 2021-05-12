@@ -1,6 +1,6 @@
 import React from "react";
-import "./style.css";
-import pizza from "./images/pizza.png";
+import "../styles/style.css";
+import pizza from "../assets/images/pizza.png";
 
 export default function Home() {
   return (

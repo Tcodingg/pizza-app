@@ -1,5 +1,5 @@
 import React from "react";
-import { menudata } from "./menudata";
+import { menudata } from "../assets/data/menudata";
 import { AiFillHeart } from "react-icons/ai";
 
 export default function Menu() {

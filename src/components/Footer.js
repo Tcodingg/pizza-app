@@ -5,6 +5,7 @@ import { CgTwitter } from "react-icons/cg";
 import { MdLocationOn } from "react-icons/md";
 import { AiFillPhone } from "react-icons/ai";
 import { AiFillMail } from "react-icons/ai";
+import "../styles/style.css";
 
 export default function Footer() {
   return (
